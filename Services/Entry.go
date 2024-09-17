@@ -1,12 +1,12 @@
 package Services
 
 type Entry struct {
-	Index    uint64
-	Title    string
-	Category string
-	Rating   string
-	Started  string
-	Finished string
-	Status   string
-	Notes    string
+	Index    uint64 `json:"Index"`
+	Title    string `json:"Title"`
+	Category string `json:"Category"`
+	Rating   string `json:"Rating"`
+	Started  string `json:"Started"`
+	Finished string `json:"Finished"`
+	Status   string `json:"Status"`
+	Notes    string `json:"Notes"`
 }

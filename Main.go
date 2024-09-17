@@ -1,7 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"Ani-Track/Services"
+	"fmt"
+)
 
 func main() {
-	fmt.Println("Hello World")
+	output := Services.Read()
+	fmt.Println(output)
 }
