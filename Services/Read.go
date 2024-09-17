@@ -2,10 +2,8 @@ package Services
 
 import (
 	"encoding/json"
-	"fmt"
 	"io/ioutil"
 	"os"
-	"strings"
 )
 
 func Read() (string, error) {
@@ -15,31 +13,20 @@ func Read() (string, error) {
 	}
 	defer file.Close()
 
-	filecontent, err := ioutil.ReadAll(file)
+	content, err := ioutil.ReadAll(file)
 	if err != nil {
 		return "", err
 	}
 
 	var entries []Entry
-	if err := json.Unmarshal(filecontent, &entries); err != nil {
+	if err := json.Unmarshal(content, &entries); err != nil {
 		return "", err
 	}
 
-	var result strings.Builder
-
-	result.WriteString("[\n")
-
-	for i, entry := range entries {
-
-		result.WriteString(fmt.Sprintf("  {"))
-		result.WriteString(entry.ToJson())
-
-		if i != len(entries)-1 {
-			result.WriteString(" },\n")
-		} else {
-			result.WriteString(" }\n")
-		}
+	entriesJson, err := json.MarshalIndent(entries, "", "  ")
+	if err != nil {
+		return "", err
 	}
-	result.WriteString("]")
-	return result.String(), nil
+
+	return string(entriesJson), nil
 }

@@ -1,6 +1,7 @@
 package Services
 
 import (
+	"encoding/json"
 	"fmt"
 	"strings"
 )
@@ -17,9 +18,18 @@ type Entry struct {
 	Notes    string `json:"Notes"`
 }
 
-func (entry Entry) ToJson() string {
+func (entry Entry) ToJson() (string, error) {
+	jsonData, err := json.Marshal(entry)
+	if err != nil {
+		return "", err
+	}
+	return string(jsonData), nil
+}
+
+// Not Finished Yet
+
+func (entry Entry) ToString() string {
 	var entity strings.Builder
-	entity.WriteString(fmt.Sprintf(` "Index":%d, "Title":"%s", "Category":"%s", "Rating":"%s", "Started":"%s", "Finished":"%s", "Status":"%s", "Progress":"%s", "Notes":"%s"`,
-		entry.Index, entry.Title, entry.Category, entry.Rating, entry.Started, entry.Finished, entry.Status, entry.Progress, entry.Notes))
+	entity.WriteString(fmt.Sprintf(""))
 	return entity.String()
 }
