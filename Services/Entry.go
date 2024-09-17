@@ -18,16 +18,8 @@ type Entry struct {
 }
 
 func (entry Entry) ToJson() string {
-	var item strings.Builder
-
-	item.WriteString(fmt.Sprintf(" \"Index\":%d,", entry.Index))
-	item.WriteString(fmt.Sprintf(" \"Title\":\"%s\",", entry.Title))
-	item.WriteString(fmt.Sprintf(" \"Category\":\"%s\",", entry.Category))
-	item.WriteString(fmt.Sprintf(" \"Rating\":\"%s\",", entry.Rating))
-	item.WriteString(fmt.Sprintf(" \"Started\":\"%s\",", entry.Started))
-	item.WriteString(fmt.Sprintf(" \"Finished\":\"%s\",", entry.Finished))
-	item.WriteString(fmt.Sprintf(" \"Status\":\"%s\",", entry.Status))
-	item.WriteString(fmt.Sprintf(" \"Progress\":\"%s\",", entry.Progress))
-	item.WriteString(fmt.Sprintf(" \"Notes\":\"%s\"", entry.Notes))
-	return item.String()
+	var entity strings.Builder
+	entity.WriteString(fmt.Sprintf(` "Index":%d, "Title":"%s", "Category":"%s", "Rating":"%s", "Started":"%s", "Finished":"%s", "Status":"%s", "Progress":"%s", "Notes":"%s"`,
+		entry.Index, entry.Title, entry.Category, entry.Rating, entry.Started, entry.Finished, entry.Status, entry.Progress, entry.Notes))
+	return entity.String()
 }
