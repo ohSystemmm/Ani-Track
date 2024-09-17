@@ -1,13 +1,14 @@
 [
   {
     "Index":      0,
-    "Title":      "Title 0",
-    "Category":   "Anime",
-    "Rating":     "100/100",
-    "Started" :   "1q September 2024",
-    "Finished" :  "2q September 2024",
+    "Title":      "Title 1",
+    "Category":   "Manga",
+    "Rating":     "100/99",
+    "Started" :   "2q September 2024",
+    "Finished" :  "3q September 2024",
     "Status":     "Finished",
-    "Notes":      "A very Cool Anime"
+    "Progress":   "Episode X",
+    "Notes":      "A very Cool Manga"
   },
   {
     "Index":      1,
@@ -17,6 +18,95 @@
     "Started" :   "2q September 2024",
     "Finished" :  "3q September 2024",
     "Status":     "Finished",
+    "Progress":   "Episode X",
+    "Notes":      "A very Cool Manga"
+  },
+  {
+    "Index":      2,
+    "Title":      "Title 1",
+    "Category":   "Manga",
+    "Rating":     "100/99",
+    "Started" :   "2q September 2024",
+    "Finished" :  "3q September 2024",
+    "Status":     "Finished",
+    "Progress":   "Episode X",
+    "Notes":      "A very Cool Manga"
+  },
+  {
+    "Index":      3,
+    "Title":      "Title 1",
+    "Category":   "Manga",
+    "Rating":     "100/99",
+    "Started" :   "2q September 2024",
+    "Finished" :  "3q September 2024",
+    "Status":     "Finished",
+    "Progress":   "Episode X",
+    "Notes":      "A very Cool Manga"
+  },
+  {
+    "Index":      4,
+    "Title":      "Title 1",
+    "Category":   "Manga",
+    "Rating":     "100/99",
+    "Started" :   "2q September 2024",
+    "Finished" :  "3q September 2024",
+    "Status":     "Finished",
+    "Progress":   "Episode X",
+    "Notes":      "A very Cool Manga"
+  },
+  {
+    "Index":      5,
+    "Title":      "Title 1",
+    "Category":   "Manga",
+    "Rating":     "100/99",
+    "Started" :   "2q September 2024",
+    "Finished" :  "3q September 2024",
+    "Status":     "Finished",
+    "Progress":   "Episode X",
+    "Notes":      "A very Cool Manga"
+  },
+  {
+    "Index":      6,
+    "Title":      "Title 1",
+    "Category":   "Manga",
+    "Rating":     "100/99",
+    "Started" :   "2q September 2024",
+    "Finished" :  "3q September 2024",
+    "Status":     "Finished",
+    "Progress":   "Episode X",
+    "Notes":      "A very Cool Manga"
+  },
+  {
+    "Index":      7,
+    "Title":      "Title 1",
+    "Category":   "Manga",
+    "Rating":     "100/99",
+    "Started" :   "2q September 2024",
+    "Finished" :  "3q September 2024",
+    "Status":     "Finished",
+    "Progress":   "Episode X",
+    "Notes":      "A very Cool Manga"
+  },
+  {
+    "Index":      8,
+    "Title":      "Title 1",
+    "Category":   "Manga",
+    "Rating":     "100/99",
+    "Started" :   "2q September 2024",
+    "Finished" :  "3q September 2024",
+    "Status":     "Finished",
+    "Progress":   "Episode X",
+    "Notes":      "A very Cool Manga"
+  },
+  {
+    "Index":      9,
+    "Title":      "Title 1",
+    "Category":   "Manga",
+    "Rating":     "100/99",
+    "Started" :   "2q September 2024",
+    "Finished" :  "3q September 2024",
+    "Status":     "Finished",
+    "Progress":   "Episode X",
     "Notes":      "A very Cool Manga"
   }
 ]

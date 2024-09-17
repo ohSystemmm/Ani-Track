@@ -26,17 +26,29 @@ func Read() (string, error) {
 	}
 
 	var result strings.Builder
-	
-	for _, entry := range entries {
-		result.WriteString(fmt.Sprintf("Index: %d\n", entry.Index))
-		result.WriteString(fmt.Sprintf("Title: %s\n", entry.Title))
-		result.WriteString(fmt.Sprintf("Category: %s\n", entry.Category))
-		result.WriteString(fmt.Sprintf("Rating: %s\n", entry.Rating))
-		result.WriteString(fmt.Sprintf("Started: %s\n", entry.Started))
-		result.WriteString(fmt.Sprintf("Finished: %s\n", entry.Finished))
-		result.WriteString(fmt.Sprintf("Status: %s\n", entry.Status))
-		result.WriteString(fmt.Sprintf("Notes: %s\n\n", entry.Notes))
+
+	result.WriteString("[\n")
+
+	for i, entry := range entries {
+		result.WriteString(fmt.Sprintf("  {"))
+		result.WriteString(fmt.Sprintf(" \"Index\":%d,", entry.Index))
+		result.WriteString(fmt.Sprintf(" \"Title\":\"%s\",", entry.Title))
+		result.WriteString(fmt.Sprintf(" \"Category\":\"%s\",", entry.Category))
+		result.WriteString(fmt.Sprintf(" \"Rating\":\"%s\",", entry.Rating))
+		result.WriteString(fmt.Sprintf(" \"Started\":\"%s\",", entry.Started))
+		result.WriteString(fmt.Sprintf(" \"Finished\":\"%s\",", entry.Finished))
+		result.WriteString(fmt.Sprintf(" \"Status\":\"%s\",", entry.Status))
+		result.WriteString(fmt.Sprintf(" \"Progress\":\"%s\",", entry.Progress))
+		result.WriteString(fmt.Sprintf(" \"Notes\":\"%s\"", entry.Notes))
+
+		if i != len(entries)-1 {
+			result.WriteString(" },\n")
+		} else {
+			result.WriteString(" }\n")
+		}
 	}
+
+	result.WriteString("]")
 
 	return result.String(), nil
 }

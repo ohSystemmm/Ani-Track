@@ -8,5 +8,6 @@ type Entry struct {
 	Started  string `json:"Started"`
 	Finished string `json:"Finished"`
 	Status   string `json:"Status"`
+	Progress string `json:"Progress"`
 	Notes    string `json:"Notes"`
 }
