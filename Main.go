@@ -3,16 +3,16 @@ package main
 import (
 	"Ani-Track/Services"
 	"fmt"
-	btea "github.com/charmbracelet/bubbletea"
+	// btea "github.com/charmbracelet/bubbletea"
 	// bzone "github.com/lrstanley/bubblezone"
-	"os"
+	// "os"
 )
 
 func main() {
 	output, _ := Services.Read()
 	fmt.Println(output)
-	if _, err := p.Run(); err != nil {
-		fmt.Printf("Alas, there's been an error: %v", err)
-		os.Exit(1)
-	}
+	// if _, err := p.Run(); err != nil {
+	// 	fmt.Printf("Alas, there's been an error: %v", err)
+	// 	os.Exit(1)
+	// }
 }
