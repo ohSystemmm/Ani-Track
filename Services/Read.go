@@ -15,13 +15,13 @@ func Read() (string, error) {
 	}
 	defer file.Close()
 
-	bytes, err := ioutil.ReadAll(file)
+	filecontent, err := ioutil.ReadAll(file)
 	if err != nil {
 		return "", err
 	}
 
 	var entries []Entry
-	if err := json.Unmarshal(bytes, &entries); err != nil {
+	if err := json.Unmarshal(filecontent, &entries); err != nil {
 		return "", err
 	}
 
