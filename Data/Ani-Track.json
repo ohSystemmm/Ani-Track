@@ -1,0 +1,22 @@
+[
+  {
+    "Index":      0,
+    "Title":      "Title 0",
+    "Category":   "Anime",
+    "Rating":     "100/100",
+    "Started" :   "1q September 2024",
+    "Finished" :  "2q September 2024",
+    "Status":     "Finished",
+    "Notes":      "A very Cool Anime"
+  },
+  {
+    "Index":      1,
+    "Title":      "Title 1",
+    "Category":   "Manga",
+    "Rating":     "100/99",
+    "Started" :   "2q September 2024",
+    "Finished" :  "3q September 2024",
+    "Status":     "Finished",
+    "Notes":      "A very Cool Manga"
+  }
+]
