@@ -6,6 +6,6 @@ import (
 )
 
 func main() {
-	output := Services.Read()
+	output, _ := Services.Read()
 	fmt.Println(output)
 }
