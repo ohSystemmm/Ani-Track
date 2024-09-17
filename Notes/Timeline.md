@@ -4,6 +4,6 @@
 </div>
 <br>
 
-Services (#1) by ohSystemmm <3
-Status: Pull Request Merged
-Changes: Added a Service to Read from a json file and output it. 
+Services (#1) by ohSystemmm <3  
+Status: Pull Request Merged  
+Changes: Added a Service to Read from a json file and output it.  
