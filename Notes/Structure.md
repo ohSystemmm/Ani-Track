@@ -4,22 +4,25 @@
 </div>
 <br>
 
-## Structure v0.0.1
+## Structure v0.0.2
 
 ```bash
 Ani-Track
-    ├── LICENSE                               # GPL v3 License
-    ├── Main.go                               # Init point
-    ├── Notes                                 # Internal Dev. Directory
-    │     ├── Ideas.md                        # Ideas
-    │     ├── Notes.md                        # Notes
-    │     ├── Structure.md                    # Folder Structure
-    │     └── Timeline.md                     # Timeline - Pull & Merge Log
-    ├── README.md                             # GitHub Readme
-    ├── Services                              # Services
-    │      └── PLACEHOLDER
-    └── TUI                                   # TUI
-         └── App.go                           # Init point of the TUI
+├── LICENSE
+├── Main.go
+├── Notes
+│   ├── Ideas.md
+│   ├── Notes.md
+│   ├── Structure.md
+│   └── Timeline.md
+├── README.md
+├── Services
+│   ├── Entry.go
+│   ├── Init.go
+│   ├── Read.go
+│   └── Save.go
+└── TUI
+    └── App.go
 
-4 directories, 9 files
+4 directories, 12 files
 ```
