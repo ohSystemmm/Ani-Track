@@ -26,10 +26,9 @@ func (entry Entry) ToJson() (string, error) {
 	return string(jsonData), nil
 }
 
-// Not Finished Yet
-
 func (entry Entry) ToString() string {
 	var entity strings.Builder
-	entity.WriteString(fmt.Sprintf(""))
+	entity.WriteString(fmt.Sprintf("Index: %v, Title: %v, Category: %v, Rating: %v, Started: %v, Finished: %v, Status: %v, Progress: %v, Notes: %v",
+		entry.Index, entry.Title, entry.Category, entry.Rating, entry.Started, entry.Finished, entry.Status, entry.Progress, entry.Notes))
 	return entity.String()
 }
