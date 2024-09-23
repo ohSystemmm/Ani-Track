@@ -1,7 +1,6 @@
 package Services
 
 import (
-	"encoding/json"
 	"fmt"
 	"strings"
 )
@@ -16,14 +15,6 @@ type Entry struct {
 	Status   string `json:"Status"`
 	Progress string `json:"Progress"`
 	Notes    string `json:"Notes"`
-}
-
-func (entry Entry) ToJson() (string, error) {
-	jsonData, err := json.Marshal(entry)
-	if err != nil {
-		return "", err
-	}
-	return string(jsonData), nil
 }
 
 func (entry Entry) ToString() string {
