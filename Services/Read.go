@@ -6,8 +6,10 @@ import (
 	"os"
 )
 
-func Read() (string, error) {
-	file, err := os.Open("Data/Ani-Track.json")
+// filepath = Data/Ani-Track.json
+
+func Read(filepath string) (string, error) {
+	file, err := os.Open(filepath)
 	if err != nil {
 		return "", err
 	}
