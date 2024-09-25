@@ -2,17 +2,12 @@ package main
 
 import (
 	"Ani-Track/Services"
+	"Ani-Track/TUI"
 	"fmt"
-	// btea "github.com/charmbracelet/bubbletea"
-	// bzone "github.com/lrstanley/bubblezone"
-	// "os"
 )
 
 func main() {
 	output, _ := Services.Read()
 	fmt.Println(output)
-	// if _, err := p.Run(); err != nil {
-	// 	fmt.Printf("Alas, there's been an error: %v", err)
-	// 	os.Exit(1)
-	// }
+	TUI.Tui()
 }
