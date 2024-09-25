@@ -11,7 +11,7 @@ InstallPath = /usr/bin/
 
 install:
 	go build -o $(BinaryFile)
-	sudo mv ani-$(BinaryFile) $(InstallPath)
+	sudo mv $(BinaryFile) $(InstallPath)
 
 uninstall: 
 	sudo rm -rf /usr/bin/ani-track
