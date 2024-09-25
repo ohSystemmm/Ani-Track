@@ -30,7 +30,7 @@
         buildInputs = [ pkgs.go ];
 
         buildPhase = ''
-          go build -o ${pname}
+          go build -o ani-track
         '';
 
         installPhase = ''
