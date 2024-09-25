@@ -6,13 +6,12 @@
 # 
 # by ohSystemmm <3 
 
-Binary = ani-track
+BinaryFile = ani-track
 InstallPath = /usr/bin/
 
 install:
-	go build -o ani-track
-	sudo mv ani-track $(InstallPath)
-	
+	go build -o $(BinaryFile)
+	sudo mv ani-$(BinaryFile) $(InstallPath)
 
 uninstall: 
 	sudo rm -rf /usr/bin/ani-track
