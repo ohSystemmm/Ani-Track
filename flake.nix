@@ -4,7 +4,7 @@
 # |  _| | (_| |   <  __/_| | | | |>  <
 # |_| |_|\__,_|_|\_\___(_)_| |_|_/_/\_\
 # 
-# by ohSystemmm <3 
+# by ohSystemmm <3
 
 {
   description = "A CLI based Anime Tracker";
@@ -15,9 +15,8 @@
 
   outputs = { self, nixpkgs }: {
     packages = let
-      pkgs = nixpkgs.lib.mkShell {
-        inherit (nixpkgs) lib;
-        go = nixpkgs.go_1_20;
+      pkgs = import nixpkgs {
+        inherit (nixpkgs) system;
       };
     in
     {
@@ -27,7 +26,7 @@
 
         src = ./.;
 
-        buildInputs = [ pkgs.go ];
+        buildInputs = [ pkgs.go_1_20 ];
 
         buildPhase = ''
           go build -o ani-track
@@ -41,8 +40,7 @@
     };
 
     devShell = pkgs.mkShell {
-      buildInputs = [ pkgs.go ];
+      buildInputs = [ pkgs.go_1_20 ];
     };
   };
 }
-

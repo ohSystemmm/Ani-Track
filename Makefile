@@ -4,14 +4,14 @@
 # | |  | | (_| |   <  __/  _| | |  __/
 # |_|  |_|\__,_|_|\_\___|_| |_|_|\___|
 # 
-# by ohSystemmm <3 
+# by ohSystemmm <3
 
 BinaryFile = ani-track
-InstallPath = /usr/bin/
+InstallPath = /usr/local/bin/
 
 install:
 	go build -o $(BinaryFile)
-	sudo mv $(BinaryFile) $(InstallPath)
+	sudo install -Dm755 $(BinaryFile) $(InstallPath)$(BinaryFile)
 
-uninstall: 
-	sudo rm -rf /usr/bin/$(BinaryFile)
+uninstall:
+	sudo rm -f $(InstallPath)$(BinaryFile)
