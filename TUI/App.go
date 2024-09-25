@@ -77,7 +77,7 @@ func initialModel() model {
 }
 
 func Tui() {
-	zone.NewGlobal()
+	bzone.NewGlobal()
 	p := tea.NewProgram(initialModel(), tea.WithAltScreen(), tea.WithMouseCellMotion())
 	if _, err := p.Run(); err != nil {
 		fmt.Printf("Alas, there's been an error: %v", err)
