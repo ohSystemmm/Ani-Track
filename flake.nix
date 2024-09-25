@@ -35,7 +35,7 @@
 
         installPhase = ''
           mkdir -p $out/bin
-          mv ${pname} $out/bin/
+          mv ani-track $out/bin/
         '';
       };
     };
