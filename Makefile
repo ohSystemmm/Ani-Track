@@ -14,4 +14,4 @@ install:
 	sudo mv $(BinaryFile) $(InstallPath)
 
 uninstall: 
-	sudo rm -rf /usr/bin/ani-track
+	sudo rm -rf /usr/bin/$(BinaryFile)
