@@ -10,13 +10,13 @@
   description = "A CLI based Anime Tracker";
 
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
   };
 
   outputs = { self, nixpkgs }: {
-    packages = let
+    packages.${nixpkgs.system} = let
       pkgs = import nixpkgs {
-        inherit (nixpkgs) system;
+        system = nixpkgs.system;
       };
     in
     {
@@ -39,7 +39,7 @@
       };
     };
 
-    devShell = pkgs.mkShell {
+    devShell.${nixpkgs.system} = pkgs.mkShell {
       buildInputs = [ pkgs.go_1_20 ];
     };
   };
