@@ -1,13 +1,14 @@
 #   __ _       _                _
-# / _| | __ _| | _____   _ __ (_)_  __
+#  / _| | __ _| | _____   _ __ (_)_  __
 # | |_| |/ _` | |/ / _ \ | '_ \| \ \/ /
 # |  _| | (_| |   <  __/_| | | | |>  <
 # |_| |_|\__,_|_|\_\___(_)_| |_|_/_/\_\
 # 
-# by ohSystemmm <3
+# Maintainer: ohSystemmm
+# Contributor: Y2kun
 
 {
-  description = "A CLI based Anime Tracker";
+  description = "Your simple cli based tool for tracking anime and manga progress."
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
