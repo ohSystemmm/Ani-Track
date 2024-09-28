@@ -9,3 +9,9 @@
 
 # JetBrains
 .idea/
+
+# Build Log File
+build.log
+
+# Compiled binary
+ani-track
