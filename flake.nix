@@ -19,7 +19,7 @@
       system = builtins.currentSystem;
     };
   in {
-    packages.${pkgs.system} = pkgs.stdenv.mkDerivation {
+    defaultPackage.${pkgs.system} = pkgs.stdenv.mkDerivation {
       pname = "ani-track";
       version = "0.5.0";
 
@@ -42,3 +42,4 @@
     };
   };
 }
+
