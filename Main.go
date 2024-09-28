@@ -11,9 +11,6 @@ func main() {
 	if err != nil {
 		fmt.Println(err)
 	}
-
+	Services.Save("Test", "~/Downloads/file.txt")
 	fmt.Println(content)
-	if !Services.Save(content, "/home/ohsystemmm/Downloads/file.txt") {
-		fmt.Println("Nah I'd win")
-	}
 }
