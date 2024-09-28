@@ -11,11 +11,25 @@ pkgname=ani-track
 pkgver=0.5.0
 pkgrel=1
 pkgdesc="Your simple cli based tool for tracking anime and manga progress."
-arch=( 'any' )
-depends=('make' 'go')
+arch=('any')
 url="https://github.com/ohSystemmm/Ani-Track.git"
-license=('gpl3')
+license=('GPL3')
+depends=('make')
+makedepends=('go')
+source=("git+https://github.com/ohSystemmm/Ani-Track.git")
+sha256sums=('SKIP')
+
+pkgver() {
+    cd "$srcdir/$pkgname"
+    git describe --tags | sed 's/^v//;s/-/./g'
+}
+
+build() {
+    cd "$srcdir/$pkgname"
+    make install
+}
 
 package() {
-  #install -Dm644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+    cd "$srcdir/$pkgname"
+    make DESTDIR="$pkgdir" install
 }
