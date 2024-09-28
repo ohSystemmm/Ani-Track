@@ -9,9 +9,19 @@
 BinaryFile = ani-track
 InstallPath = /usr/local/bin/
 
-install:
+all: $(BinaryFile)
+
+$(BinaryFile):
 	go build -o $(BinaryFile)
-	sudo install -Dm755 $(BinaryFile) $(InstallPath)$(BinaryFile)
+
+install: $(BinaryFile)
+	install -Dm755 $(BinaryFile) $(InstallPath)$(BinaryFile)
 
 uninstall:
+	@echo "Uninstalling $(BinaryFile) from $(InstallPath)"
 	sudo rm -f $(InstallPath)$(BinaryFile)
+
+clean:
+	rm -f $(BinaryFile)
+
+.PHONY: all install uninstall clean
