@@ -4,10 +4,20 @@ import (
 	"encoding/json"
 	"io/ioutil"
 	"os"
+	"strings"
 )
 
 func Read() (string, error) {
-	file, err := os.Open("Data/Ani-Track.json")
+	filepath := "~/.local/state/ani-track/Ani-Track.json"
+	if strings.HasPrefix(filepath, "~/") {
+		homeDir, err := os.UserHomeDir()
+		if err != nil {
+			return "", err
+		}
+		filepath = strings.Replace(filepath, "~", homeDir, 1)
+	}
+
+	file, err := os.Open(filepath)
 	if err != nil {
 		return "", err
 	}
