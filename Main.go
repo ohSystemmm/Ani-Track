@@ -11,6 +11,6 @@ func main() {
 	if err != nil {
 		fmt.Println(err)
 	}
-	Services.Save("Test", "~/Downloads/file.txt")
+	Services.Download("Test", "~/Downloads/file.txt")
 	fmt.Println(content)
 }

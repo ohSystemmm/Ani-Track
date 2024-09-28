@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func Save(content string, filepath string) bool {
+func Download(content string, filepath string) bool {
 	if strings.HasPrefix(filepath, "~/") {
 		homeDir, err := os.UserHomeDir()
 		if err != nil {
