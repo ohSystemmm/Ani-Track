@@ -19,12 +19,12 @@ type model struct {
 func initialModel() model {
 	columns := []table.Column{
 		{Title: "Title", Width: 20},
-		{Title: "Category", Width: 10},
+		{Title: "Category", Width: 8},
 		{Title: "Rating", Width: 8},
-		{Title: "Started", Width: 12},
-		{Title: "Finished", Width: 12},
+		{Title: "Started", Width: 14},
+		{Title: "Finished", Width: 14},
 		{Title: "Status", Width: 12},
-		{Title: "Notes", Width: 20},
+		{Title: "Notes", Width: 40},
 	}
 
 	rows := []table.Row{
@@ -136,11 +136,14 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			m.table.MoveUp(1)
 		case "down": // Scroll down in the table
 			m.table.MoveDown(1)
+		case "n":
+
 		}
+
 	case tea.WindowSizeMsg:
 		m.width = msg.Width
 		m.height = msg.Height
-		m.table.SetHeight(m.height - 3)
+		m.table.SetHeight((m.height / 2) - 3)
 		// case tea.MouseMsg: // Handle mouse events
 		// 	mouseEvent := msg.Mouse()  // Get the underlying mouse event
 		// 	switch mouseEvent.Button { // Use a switch statement to check mouse button
@@ -165,5 +168,5 @@ func (m model) View() string {
 	// Add an outer border around the entire table
 	tableView := lipgloss.NewStyle().BorderStyle(lipgloss.RoundedBorder()).Render(m.table.View())
 
-	return tableView + "\nPress q to quit."
+	return tableView
 }
