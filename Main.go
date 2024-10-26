@@ -2,7 +2,7 @@ package main
 
 import (
 	"Ani-Track/Services"
-  "Ani-Track/TUI"
+	"Ani-Track/TUI"
 	"fmt"
 )
 
@@ -18,6 +18,6 @@ func main() {
 		fmt.Println(err)
 	}
 
-  fmt.Println(content)
-  TUI.Tui()
+	fmt.Println(content)
+	TUI.Tui()
 }
